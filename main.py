@@ -43,5 +43,5 @@ def bsod_simulation():
     root.mainloop()
 
 if __name__ == "__main__":
-    ctypes.windll.kernel32.SetConsoleTitleW("Fake BSOD")
+    ctypes.windll.kernel32.SetConsoleTitleW("Windows Error")
     bsod_simulation()
