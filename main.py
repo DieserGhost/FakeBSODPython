@@ -1,5 +1,10 @@
 import tkinter as tk
 import ctypes
+import winsound
+
+
+def play_error_sound():
+    winsound.MessageBeep(winsound.MB_ICONHAND)
 
 def make_fullscreen(window):
     window.attributes('-fullscreen', True)
@@ -43,5 +48,6 @@ def bsod_simulation():
     root.mainloop()
 
 if __name__ == "__main__":
+    play_error_sound()
     ctypes.windll.kernel32.SetConsoleTitleW("Windows Error")
     bsod_simulation()
